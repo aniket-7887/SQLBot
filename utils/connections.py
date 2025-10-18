@@ -5,9 +5,6 @@ import os
 load_dotenv()
 
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
-PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
-
-os.environ['PINECONE_API_KEY'] = PINECONE_API_KEY
 
 LLM = GoogleGenerativeAI(
     model='gemini-2.0-flash',
