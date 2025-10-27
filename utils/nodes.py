@@ -3,14 +3,14 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from .state import ThisIsState
 import os
-from utils.connections import LLM, EMBEDDING, get_db_connection
+from utils.connections import LLM, PINECONE, get_db_connection
 from utils.prompt import build_prompt
 INDEX_NAME = os.getenv('INDEX_NAME')
 
 def fetch_context(state: ThisIsState) -> dict:
     try:
-        vector_store = Pinecone.from_existing_index(INDEX_NAME, EMBEDDING)
-        raw_context = vector_store.similarity_search_with_relevance_scores(query=state['user_query'], k=5)
+        # vector_store = PINECONE.from_existing_index(INDEX_NAME, EMBEDDING)
+        raw_context = PINECONE.similarity_search_with_relevance_scores(query=state['user_query'], k=5)
         context = [item[0].page_content for item in raw_context]
         return {'db_schema': context}
     except Exception as e:
@@ -22,9 +22,11 @@ def generate_sql_query(state: ThisIsState) -> dict:
         prompt = build_prompt(state=state)
         response = LLM.invoke(input=prompt)
         sql_query = response.content if hasattr(response, "content") else str(response)
-        temp = str(sql_query[6:])
-        temp = str(temp[:-4])
-        return {'sql_query': temp.strip()}
+        if str(sql_query).startswith("```"):
+            temp = str(sql_query[6:])
+            temp = str(temp[:-4])
+            return {'sql_query': temp.strip()}
+        return {'sql_query': sql_query.strip()}
     except:
         return 'Error while fetching query!!!'
 

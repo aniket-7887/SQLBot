@@ -16,6 +16,3 @@ graph.add_edge("query_execution", "data_representation")
 graph.add_edge("data_representation", END)
 
 workflow = graph.compile()
-
-result = workflow.invoke({'user_query': "List All Flights with Departure and Arrival"})
-print(result['result'])
