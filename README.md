@@ -2,6 +2,8 @@
 
 A natural language to SQL query generator powered by AI. Transform plain English questions into SQL queries effortlessly and presenting it back in natural language.
 
+**Note: This project is still in development phase, many more features are comming soon...**
+
 ## Table of Contents
 1. [Getting Started](#-getting-started)
 2. [Prerequisites](#-prerequisites)
