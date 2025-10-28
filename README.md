@@ -3,14 +3,14 @@
 A natural language to SQL query generator powered by AI. Transform plain English questions into SQL queries effortlessly and presenting it back in natural language.
 
 ## Table of Contents
-1. [Getting Started](#getting-started)
-2. [Prerequisites](#prerequisites)
+1. [Getting Started](#-getting-started)
+2. [Prerequisites](#-prerequisites)
 3. [Project Setup](#project-setup)
 4. [Running the Application](#running-the-application)
 5. [Usage](#usage)
-6. [Author](#author)
-7. [Contributing](#contributing)
-8. [Contact](#contact)
+6. [Author](#-author)
+7. [Contributing](#-contributing)
+8. [Contact](#-contact)
 
 ## 🚀 Getting Started
 
