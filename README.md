@@ -94,6 +94,9 @@ WHERE customer_id IN (
 **Aniket Mali**
 - GitHub: [@aniket-7887](https://github.com/aniket-7887)
 
+**Akshay Pore**
+- GitHub: [@AkshayPore](https://github.com/AkshayPore)
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
