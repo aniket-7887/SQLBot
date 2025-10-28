@@ -1,15 +1,12 @@
-from langchain_pinecone import Pinecone
 from langchain.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
-from .state import ThisIsState
-import os
 from utils.connections import LLM, PINECONE, get_db_connection
 from utils.prompt import build_prompt
-INDEX_NAME = os.getenv('INDEX_NAME')
+from .state import ThisIsState
+import os
 
 def fetch_context(state: ThisIsState) -> dict:
     try:
-        # vector_store = PINECONE.from_existing_index(INDEX_NAME, EMBEDDING)
         raw_context = PINECONE.similarity_search_with_relevance_scores(query=state['user_query'], k=5)
         context = [item[0].page_content for item in raw_context]
         return {'db_schema': context}

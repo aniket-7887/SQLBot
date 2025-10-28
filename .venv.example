@@ -1,0 +1,16 @@
+GOOGLE_API_KEY =
+PINECONE_API_KEY =
+INDEX_NAME =
+
+# Database Connection Credentials
+DB_HOST =
+DB_USER =
+DB_PASSWORD =
+DATABASE =
+
+
+# LangSmith Credentials
+LANGCHAIN_TRACING_V2=true
+LANGCHIAN_ENDPOINT='https://api.smith.langchain.com'
+LANGCHAIN_API_KEY=
+LANGCHAIN_PROJECT=
