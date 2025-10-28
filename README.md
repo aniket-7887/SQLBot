@@ -8,19 +8,21 @@ A natural language to SQL query generator powered by AI. Transform plain English
 3. [Project Setup](#project-setup)
 4. [Running the Application](#running-the-application)
 5. [Usage](#usage)
-6. [Contributing](#contributing)
+6. [Author](#author)
+7. [Contributing](#contributing)
+8. [Contact](#contact)
 
-## Getting Started
+## 🚀 Getting Started
 
 Follow the instructions below to set up and run the SQLBot application.
 
-### Prerequisites
+### 🐣 Prerequisites
 
 Ensure you have the following installed:
 - Python >= 3.10
 - Database (MySQL, PostgreSQL, or SQLite)
 
-### Project Setup
+### 🛠️ Project Setup
 
 1. Clone the project repository:
     ```bash
@@ -64,7 +66,7 @@ streamlit frontend.py
 
 The application will be available at `http://localhost:8000`
 
-## Usage
+## 💡Usage
 
 ### Basic Query Example
 
@@ -85,6 +87,20 @@ WHERE customer_id IN (
 );
 ```
 
-## Contributing
+## 👨‍💻 Author
+
+**Aniket Mali**
+- GitHub: [@aniket-7887](https://github.com/aniket-7887)
+
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+
+## 📧 Contact
+
+For questions or suggestions, please open an issue or reach out through GitHub.
+
+---
+
+⭐ If you find this project useful, please consider giving it a star!
