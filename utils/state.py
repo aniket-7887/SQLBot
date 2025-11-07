@@ -1,12 +1,9 @@
-from typing import TypedDict, List
+from typing import TypedDict, Annotated
+from langgraph.graph.message import add_messages
+from langchain_core.messages import BaseMessage
 
-class ThisIsState(TypedDict):
+class GraphState(TypedDict):
     """
     LangGraph state for state management over the workflow execution.
     """
-    user_query: str
-    db_schema: List
-    sql_query: str
-    data: List
-    result: str
-    
+    messages: Annotated[list[BaseMessage], add_messages]
