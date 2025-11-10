@@ -42,8 +42,8 @@ def get_schema(query: str) -> list:
         
         context = [item[0].page_content for item in raw_context]
         return context
-    except Exception as e:
-        raise e
+    except Exception:
+        return f"Got an error while fetching the database schema"
 
 @tool
 def execute_sql_query(sql_query: str)-> list:
@@ -69,6 +69,6 @@ def execute_sql_query(sql_query: str)-> list:
         
         return data
         
-    except Exception as e:
-        raise e
+    except Exception:
+        return "There is a problem while executing the query. The problem can be either you've generated wrong query or there is problem while connecting database."
     
